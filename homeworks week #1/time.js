@@ -1,3 +1,3 @@
-const currentDate = new Date();
-
-console.log(currentDate);
+const moment = require('moment');
+console.log(`Date: ${moment().format('MMMM Do YYYY')}
+Time: ${moment().format('h:mm:ss a')}`);
