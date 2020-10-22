@@ -5,9 +5,15 @@ const rl = readline.createInterface({
 });
 
 rl.question('Input value for YEAR: ', (input) => {
-  // TODO: Log the answer in a database
+
   const YEAR = input;
-  console.log(YEAR);
+
+  if( ((YEAR % 4 === 0) && !(YEAR % 100 === 0))  || (YEAR % 400 === 0) ) {
+      console.log(`Yes, ${YEAR} is leap year!`);
+  }
+  else {
+      console.log(`Nope, ${YEAR} is not a leap year.`);
+  }
 
   rl.close();
 });
