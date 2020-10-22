@@ -1,3 +1,3 @@
-# Zadania domowe
+# Szkoła Reacta
 
-**Na tej gałęzi znajdują się zadania domowe, zrealizowane podczas szkolenia "Szkoła React'a".**
+**Projekt ten przechowuje wszystkie pliki i projekty utworzone w ramach nauki Reacta, na szkoleniu "Szkoła Reacta".**
