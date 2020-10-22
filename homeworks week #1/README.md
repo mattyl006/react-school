@@ -1,12 +1,15 @@
-# Zadania domowe z pierwszego tygodnia szkolenia
+# Zadania domowe tydzień I
+
+**Celem zadań, było przećwiczenie obsługi npm.**
 
 ## Zadanie 1
 
-Napisz program, który będzie posiadał stałą YEAR z określoną wartością (wybierz dowolną wartość, nie musi być aktualny rok). Program na konsoli powinien wyświetlić informację, czy rok jest przestępny.
+Napisz program, który będzie posiadał stałą YEAR z określoną wartością (wybierz dowolną wartość, nie musi być aktualny rok).   Program na konsoli powinien wyświetlić informację, czy rok jest przestępny.
 
 ## Zadanie 2
 
-Napisz program, który wylosuje liczbę całkowitą pomiędzy 1 a 10. Następnie program pozwoli użytkownikowi wpisać w konsoli swój “strzał”. Jeśli użytkownik zgadnie, to program wyświetli informację “Udało się”, w przeciwnym razie: “Spróbuj ponownie”.
+Napisz program, który wylosuje liczbę całkowitą pomiędzy 1 a 10. Następnie program pozwoli użytkownikowi wpisać w konsoli swój “strzał”.  
+Jeśli użytkownik zgadnie, to program wyświetli informację “Udało się”, w przeciwnym razie: “Spróbuj ponownie”.
 
 ## Zadanie 3
 
