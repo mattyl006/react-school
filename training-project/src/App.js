@@ -5,7 +5,7 @@ const DAY = 'monday';
 
 function News({header, intro}) {
     return (
-        <section>
+        <section className="News">
             <h2>{header}</h2>
             <p>{intro}</p>
         </section>
