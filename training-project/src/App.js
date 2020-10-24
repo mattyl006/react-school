@@ -5,12 +5,21 @@ const DAY = 'monday';
 
 function News({header, intro}) {
     return (
-        <section className="News">
+        <section style={styles}>
             <h2>{header}</h2>
-            <p>{intro}</p>
+            <p style={styles.p}>{intro}</p>
         </section>
     );
 }
+
+const styles = {
+    backgroundColor: '#ecf0f1', // nazwy musimy pisać cammel case'em
+    border: '#95a5a6 1px solid',
+    padding: 10, // nie musimy podawać px, sam number wystarczy w przypadku js
+    p: {
+        background: '#f1c40f',
+    }
+};
 
 function App() {
     const checkDay = () => {
