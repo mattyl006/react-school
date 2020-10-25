@@ -3,13 +3,26 @@ import './App.css';
 
 const DAY = 'monday';
 
-function News({header, intro}) {
-    return (
-        <section style={styles}>
-            <h2>{header}</h2>
-            <p style={styles.p}>{intro}</p>
-        </section>
-    );
+// function News({header, intro}) {
+//     return (
+//         <section style={styles}>
+//             <h2>{header}</h2>
+//             <p style={styles.p}>{intro}</p>
+//         </section>
+//     );
+// }
+
+class News extends React.Component { // musi rozszerzać klasę dostarczoną przez React
+    // Dzieki temu mamy dostęp do niektórych metod z Component i możemy je teraz nadpisywać
+    render() {
+        const { header, intro } = this.props;
+        return(
+            <div style={styles}>
+                <h2>{header}</h2>
+                <p style={styles.p}>{intro}</p>
+            </div>
+        );
+    }
 }
 
 const styles = {
