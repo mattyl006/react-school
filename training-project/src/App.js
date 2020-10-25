@@ -1,43 +1,47 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import './App.css';
 
 const DAY = 'monday';
 
-// function News({header, intro}) {
-//     return (
-//         <section style={styles}>
-//             <h2>{header}</h2>
-//             <p style={styles.p}>{intro}</p>
-//         </section>
-//     );
-// }
-
-class News extends React.Component {
-
-    state = {
-        date: new Date(),
-        score: 5
-    };
-
-    componentDidMount() {
-        let loading = true;
-        this.setState({ score: 6 }, () => {
-            loading = false;
-        });
-    }
-
-    render() {
-        const { header, intro } = this.props;
-        const { score } = this.state;
-        return(
-            <div style={styles}>
-                <h2>{header}</h2>
-                <p style={styles.p}>{intro}</p>
-                <p>{score}</p>
-            </div>
-        );
-    }
+function News({ header, intro }) {
+    const [score, setScore] = useState(5);
+    // setScore(10);
+    /* zmienia wartość score na 10, ale nie można robić tego w tym miejscu, bo
+    wtedy za każdym razem nasz komponent zacznie się renderować, to będzie błąd */
+    return (
+        <div style={styles}>
+            <h2>{header}</h2>
+            <p style={styles.p}>{intro}</p>
+            <p>{score}</p>
+        </div>
+    )
 }
+// class News extends React.Component {
+//
+//     state = {
+//         date: new Date(),
+//         score: 5
+//     };
+//
+//     componentDidMount() {
+//         let loading = true;
+//         this.setState({ score: 6 }, () => {
+//             loading = false;
+//         });
+//     }
+//
+//     render() {
+//         const { header, intro } = this.props;
+//         const { score } = this.state;
+//         return(
+//             <div style={styles}>
+//                 <h2>{header}</h2>
+//                 <p style={styles.p}>{intro}</p>
+//                 <p>{score}</p>
+//             </div>
+//         );
+//     }
+// }
 
 const styles = {
     backgroundColor: '#ecf0f1', // nazwy musimy pisać cammel case'em
