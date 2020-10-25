@@ -10,3 +10,8 @@
   text-align: center;
 }
 
+.main__header {
+  font-size: 64px;
+  margin-bottom: 64px;
+}
+
