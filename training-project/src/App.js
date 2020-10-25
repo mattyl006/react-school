@@ -12,8 +12,10 @@ const DAY = 'monday';
 //     );
 // }
 
-class News extends React.Component { // musi rozszerzać klasę dostarczoną przez React
-    // Dzieki temu mamy dostęp do niektórych metod z Component i możemy je teraz nadpisywać
+class News extends React.Component {
+    constructor(props) {
+        super(props); // przekazanie propsów do komponentu nadrzędnego
+    }
     render() {
         const { header, intro } = this.props;
         return(
