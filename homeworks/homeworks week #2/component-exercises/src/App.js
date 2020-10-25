@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
 const posts = [
@@ -86,7 +86,9 @@ function UuidGenerate({uuid}) {
     );
 }
 
-class WebsiteTimer extends React.Component {
+// class implementation
+
+/* class WebsiteTimer extends React.Component {
     state = {
         timer: 0,
     };
@@ -113,6 +115,33 @@ class WebsiteTimer extends React.Component {
             </section>
         );
     };
+ }*/
+
+// functional implementation
+
+function WebsiteTimer() {
+    const [timer, setTimer] = useState(0);
+
+    function tick() {
+        let newTimer = timer + 1;
+        setTimer(newTimer);
+    }
+
+    let timerID = 0;
+
+    useEffect(() => {
+        timerID = setInterval(() => tick(), 1000)
+        return () => {
+            clearInterval(timerID);
+        };
+        });
+
+    return(
+        <section style={styles.websiteTimer}>
+            <h2 style={styles.websiteTimer.header}>Website Timer</h2>
+            <p style={styles.websiteTimer.timer}>{timer}</p>
+        </section>
+    );
 }
 
 function App() {
