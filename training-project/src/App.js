@@ -13,17 +13,19 @@ const DAY = 'monday';
 // }
 
 class News extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { // stan w komponencie klasowym jest przechowywany jako obiekt
-            date: new Date(),
-            score: 5
-        };
+
+    state = {
+        date: new Date(),
+        score: 5
+    };
+
+    componentDidMount() { // Ta metoda odbywa się gdy komponent zostanie zamontowany
+        this.setState({ score: 6 });
     }
+
     render() {
         const { header, intro } = this.props;
-        const { score } = this.state; /* to tego co jest w stanie, możemy odwoływać się tak jak w
-        propsach */
+        const { score } = this.state;
         return(
             <div style={styles}>
                 <h2>{header}</h2>
