@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 const posts = [
@@ -9,19 +9,49 @@ const posts = [
 ]
 
 const styles = {
-    backgroundColor: '#9b59b6',
-    border: '#95a5a6 1px solid',
-    padding: 12,
-    marginBottom: 32,
-    header: {
-        color: '#f39c12',
-        fontSize: 48,
+    posts: {
+        backgroundColor: '#9b59b6',
+        border: '#95a5a6 1px solid',
+        padding: 12,
+        marginBottom: 32,
+        header: {
+            color: '#f39c12',
+            fontSize: 48,
+        },
+        paragraph: {
+            background: '#16a085',
+            fontSize: 18,
+            color: '#2c3e50',
+        },
     },
-    paragraph: {
-        background: '#16a085',
-        fontSize: 18,
-        color: '#2c3e50',
+    uuid: {
+        backgroundColor: '#bdc3c7',
+        padding: 12,
+        margin: 48,
+        header: {
+            color: '#34495e',
+            fontSize: 48,
+        },
+        id: {
+            fontSize: 24,
+            fontWeight: 'bold',
+            color: '#d35400',
+        },
+        paragraph: {
+            fontSize: 18,
+            color: '#2c3e50',
+        }
     },
+    websiteTimer: {
+        margin: 32,
+        header: {
+            fontSize: 48,
+        },
+        timer: {
+            fontSize: 36,
+            color: '#27ae60',
+        }
+    }
 }
 
 const MAX_LENGTH = 25;
@@ -29,18 +59,60 @@ const MAX_LENGTH = 25;
 function BlogTile({title, intro}) {
     if(intro.length > MAX_LENGTH )
         return(
-            <article style={styles}>
-                <h2 style={styles.header}>{title}</h2>
-                <p style={styles.paragraph}>{intro.substring(0, 25)}...</p>
+            <article style={styles.posts}>
+                <h2 style={styles.posts.header}>{title}</h2>
+                <p style={styles.posts.paragraph}>{intro.substring(0, 25)}...</p>
             </article>
         );
     else
         return (
-            <article style={styles}>
-                <h2 style={styles.header}>{title}</h2>
-                <p style={styles.paragraph}>{intro}</p>
+            <article style={styles.posts}>
+                <h2 style={styles.posts.header}>{title}</h2>
+                <p style={styles.posts.paragraph}>{intro}</p>
             </article>
         );
+}
+
+const { v4: uuidv4 } = require('uuid');
+const ID = uuidv4();
+
+function UuidGenerate({uuid}) {
+    return(
+        <section style={styles.uuid}>
+            <h2 style={styles.uuid.header}>Uuid version 4 Generator</h2>
+            <p style={styles.uuid.id}>{uuid}</p>
+            <p style={styles.uuid.paragraph}>Refresh page to generate another id</p>
+        </section>
+    );
+}
+
+class WebsiteTimer extends React.Component {
+    state = {
+        timer: 0,
+    };
+
+    tick() {
+        let newTimer = this.state.timer + 1;
+        this.setState({timer: newTimer});
+    };
+
+    componentDidMount() {
+        this.timerID = setInterval(() => this.tick(), 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
+    render() {
+        const { timer } = this.state;
+        return(
+            <section style={styles.websiteTimer}>
+                <h2 style={styles.websiteTimer.header}>Website Timer</h2>
+                <p style={styles.websiteTimer.timer}>{timer}</p>
+            </section>
+        );
+    };
 }
 
 function App() {
@@ -50,6 +122,8 @@ function App() {
           {posts.map((elem, index) => (
               <BlogTile key={`news-${index}`} title={elem.title} intro={elem.intro} />
           ))}
+          <UuidGenerate uuid={ID} />
+          <WebsiteTimer />
       </main>
   );
 }
