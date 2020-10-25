@@ -14,14 +14,21 @@ const DAY = 'monday';
 
 class News extends React.Component {
     constructor(props) {
-        super(props); // przekazanie propsów do komponentu nadrzędnego
+        super(props);
+        this.state = { // stan w komponencie klasowym jest przechowywany jako obiekt
+            date: new Date(),
+            score: 5
+        };
     }
     render() {
         const { header, intro } = this.props;
+        const { score } = this.state; /* to tego co jest w stanie, możemy odwoływać się tak jak w
+        propsach */
         return(
             <div style={styles}>
                 <h2>{header}</h2>
                 <p style={styles.p}>{intro}</p>
+                <p>{score}</p>
             </div>
         );
     }
