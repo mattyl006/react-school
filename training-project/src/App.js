@@ -19,8 +19,11 @@ class News extends React.Component {
         score: 5
     };
 
-    componentDidMount() { // Ta metoda odbywa się gdy komponent zostanie zamontowany
-        this.setState({ score: 6 });
+    componentDidMount() {
+        let loading = true;
+        this.setState({ score: 6 }, () => {
+            loading = false;
+        });
     }
 
     render() {
