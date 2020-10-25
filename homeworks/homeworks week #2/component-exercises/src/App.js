@@ -8,13 +8,23 @@ const posts = [
     {id: 4, title: 'Mac Os become open source!', intro: 'Apple have recognized that Mac Os is the same as Linux softwares so they have shared Mac Os as open source.'},
 ]
 
+const MAX_LENGTH = 25;
+
 function BlogTile({title, intro}) {
-    return(
-        <article>
-            <h2>{title}</h2>
-            <p>{intro}</p>
-        </article>
-    );
+    if(intro.length > MAX_LENGTH )
+        return(
+            <article>
+                <h2>{title}</h2>
+                <p>{intro.substring(0, 25)}...</p>
+            </article>
+        );
+    else
+        return (
+            <article>
+                <h2>{title}</h2>
+                <p>{intro}</p>
+            </article>
+        );
 }
 
 function App() {
