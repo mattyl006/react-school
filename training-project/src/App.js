@@ -1,82 +1,44 @@
 import React, {Fragment, useState} from 'react';
 import './App.css';
 
-const DAY = 'monday';
+const newsData = [
+    {id: 1, title: 'Important! Goverment in chaos!', intro: 'Mr President broke down.'},
+    {id: 2, title: 'You can be fit before one month!', intro: 'New diet compile by korean pop stars!'},
+    {id: 3, title: 'Linux overthrow Windows.', intro: 'All developers recognize that Windows is very shoddy and start use only Linux systems.'},
+    {id: 4, title: 'Mac Os become open source!', intro: 'Apple have recognized that Mac Os is the same as Linux softwares so they have shared Mac Os as open source.'},
+];
 
 function News({ header, intro }) {
-    const [score, setScore] = useState(5);
-    // setScore(10);
-    /* zmienia wartość score na 10, ale nie można robić tego w tym miejscu, bo
-    wtedy za każdym razem nasz komponent zacznie się renderować, to będzie błąd */
+    const [score] = useState(5);
+
     return (
         <div style={styles}>
             <h2>{header}</h2>
             <p style={styles.p}>{intro}</p>
-            <p>{score}</p>
+            <p>Ocena: {score}</p>
         </div>
-    )
+    );
 }
-// class News extends React.Component {
-//
-//     state = {
-//         date: new Date(),
-//         score: 5
-//     };
-//
-//     componentDidMount() {
-//         let loading = true;
-//         this.setState({ score: 6 }, () => {
-//             loading = false;
-//         });
-//     }
-//
-//     render() {
-//         const { header, intro } = this.props;
-//         const { score } = this.state;
-//         return(
-//             <div style={styles}>
-//                 <h2>{header}</h2>
-//                 <p style={styles.p}>{intro}</p>
-//                 <p>{score}</p>
-//             </div>
-//         );
-//     }
-// }
 
 const styles = {
-    backgroundColor: '#ecf0f1', // nazwy musimy pisać cammel case'em
+    backgroundColor: '#ecf0f1',
     border: '#95a5a6 1px solid',
-    padding: 10, // nie musimy podawać px, sam number wystarczy w przypadku js
+    padding: 10,
     p: {
         background: '#f1c40f',
     }
 };
 
 function App() {
-    const checkDay = () => {
-        if(DAY === 'monday') {
-            return (
-                <Fragment>
-                    <h1>Hello React School!</h1>
-                    <News header="Header 1" intro="Intro 1" />
-                    <News header="Header 2: Breaking news" intro="Intro 2" />
-                    <News header="Header 3" intro="Intro 3: Noc mnie woła a ja wole grać w lola" />
-                </Fragment>
-            );
-        }
-        else {
-            return(
-                <Fragment>
-                    <h1>Hello React School!</h1>
-                    <p>We dont have news from monday.</p>
-                </Fragment>
-            );
-        }
-    };
-    return (
-        <div>
-            {checkDay()}
-        </div>
+    return(
+        <Fragment>
+            <h1>Hello React School!</h1>
+            <div>
+                {newsData.map((elem) => (
+                    <News key={`news-${elem.id}`} header={elem.title} intro={elem.intro} />
+                ))}
+            </div>
+        </Fragment>
     );
 }
 
