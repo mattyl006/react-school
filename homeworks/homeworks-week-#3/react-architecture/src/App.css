@@ -9,4 +9,9 @@
 .button {
   width: 20vw;
   height: 32px;
+  margin-bottom: 32px;
+}
+
+.input {
+  margin-bottom: 32px;
 }
