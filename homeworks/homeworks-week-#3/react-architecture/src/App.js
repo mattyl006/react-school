@@ -1,7 +1,5 @@
 import './App.css';
-import Button from "./form/Button";
-import Input from "./form/Input";
-import Textarea from "./form/Textarea";
+import {Button, Input, Textarea} from "./components/Form";
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 const colors = {
