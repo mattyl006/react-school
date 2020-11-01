@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Button({label, bgColor, color}) {
+function Button({children, bgColor, color}) {
     return(
-        <button className="button" style={{color: color, backgroundColor: bgColor}} backgroudColor={bgColor}>{label}</button>
+        <button className="button" style={{color: color, backgroundColor: bgColor}} backgroudColor={bgColor}>{children}</button>
     );
 }
 

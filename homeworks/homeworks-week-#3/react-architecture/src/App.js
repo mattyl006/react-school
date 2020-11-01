@@ -8,7 +8,7 @@ function App() {
   return (
       <main className="App">
         <h1>Hello react-architecture!</h1>
-          <Button label="Click me" color={alizarin} bgColor={turquoise}/>
+          <Button color={alizarin} bgColor={turquoise}>Click me!</Button>
       </main>
   );
 }
