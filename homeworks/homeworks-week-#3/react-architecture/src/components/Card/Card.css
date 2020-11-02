@@ -1,0 +1,14 @@
+.Card {
+    margin-bottom: 32px;
+    background-color: #eec4c4;
+    padding: 32px;
+}
+
+.Card__photo {
+    width: 300px;
+    height: auto;
+}
+
+.Card__describe {
+    max-width: 300px;
+}
