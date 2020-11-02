@@ -5,7 +5,7 @@ const showingMore = (describe, showMore) => {
     if(showMore) {
         return describe;
     }
-    return (describe.substring(0, 56) + '...');
+    return (describe.substring(0, 156) + '...');
 };
 
 function Card({header, date, photo, describe, showMore}) {
