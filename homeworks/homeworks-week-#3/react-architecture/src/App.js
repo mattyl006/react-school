@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+import {Menu, MenuLink} from "./components/Menu";
 import {Button, Input, Textarea} from "./components/Form";
 import Card from "./components/Card/";
 
@@ -24,6 +25,12 @@ function App() {
   return (
       <main className="App">
         <h1>Hello react-architecture!</h1>
+          <Menu>
+              <MenuLink to="/">Home</MenuLink>
+              <MenuLink to="/">About</MenuLink>
+              <MenuLink to="/" isActive={true}>Contact</MenuLink>
+              <MenuLink to="/">Posts</MenuLink>
+          </Menu>
           <Button icon={faCoffee} color={colors.alizarin} bgColor={colors.turquoise}>Click me!</Button>
           <Input color={colors.alizarin} bgColor={colors.turquoise} borderColor={colors.emerald} borderRadius={16} borderSize={12}/>
           <Textarea color={colors.alizarin} bgColor={colors.turquoise} borderColor={colors.emerald} borderRadius={16} borderSize={12}/>

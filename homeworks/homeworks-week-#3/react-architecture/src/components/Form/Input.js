@@ -2,7 +2,7 @@ import React from 'react';
 
 function Input({bgColor="blue", color="green", borderSize, borderRadius, borderColor}) {
     return (
-        <input className="input" type="text" style={{
+        <input className="input" type="text" defaultValue="input" style={{
             backgroudColor: bgColor,
             color: color,
             borderColor: borderColor,

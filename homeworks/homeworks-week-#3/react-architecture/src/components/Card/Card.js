@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css';
+import './Card.scss';
 
 const showingMore = (describe, showMore) => {
     if(showMore) {
