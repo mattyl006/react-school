@@ -2,6 +2,15 @@ import React from 'react';
 
 import './Employees.scss';
 
+let hideDetail = true;
+
+const displayDetail = () => {
+    if(hideDetail) {
+        return {display: "none"};
+    }
+    return {display: "inline-block"};
+};
+
 function Employees({data}) {
     return(
         <table className="Employees">
@@ -15,8 +24,8 @@ function Employees({data}) {
             <tbody>
             {data.map((elem) => (
                 <tr key={`employee:${elem.id}`}>
-                    <td >{elem.name}</td>
-                    <td >{elem.detail}</td>
+                    <td onClick={hideDetail = !hideDetail}>{elem.name}</td>
+                    <td style={displayDetail()}>{elem.detail}</td>
                 </tr>
             ))}
             </tbody>
