@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    font-size: 52px;
+    margin-bottom: 64px;
+    font-family: Ubuntu sans-serif;
+  }
+}
