@@ -1,3 +1,3 @@
-# Zadania domowe
+# Homeworks
 
-**Tutaj znajduja się zadania domowe zrealizowane w ramach szkolenia "Szkoła Reacta".**
+**Homeworks from Szkoła Reacta course.**
