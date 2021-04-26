@@ -12,7 +12,7 @@ const posts = [
     {
         id: 3,
         title: 'Bartosz amazing forehand',
-        intro: 'Bartosz Pilaczyński has very strong forehand shot.'
+        intro: 'Bartosz Pilaczyński has very strong forehand shoot.'
     }
 ];
 
