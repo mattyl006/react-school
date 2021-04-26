@@ -2,6 +2,7 @@ import React from 'react';
 import posts from './data/posts';
 import BlogTile from './components/BlogTile';
 import UUID from './components/UUID';
+import Timer from './components/Timer';
 
 const styles = {
     h1: {
@@ -46,6 +47,12 @@ function App() {
                 UUID Generator
             </h2>
             <UUID />
+        </section>
+        <section>
+            <h2 style={styles.h2}>
+                Timer
+            </h2>
+            <Timer />
         </section>
     </div>
   );
