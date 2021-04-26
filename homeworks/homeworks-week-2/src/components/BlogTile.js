@@ -1,15 +1,15 @@
 import React from 'react';
 
-function BlogTile() {
+function BlogTile({header, paragraph}) {
     return (
-        <section>
-            <h2>
-                Title
-            </h2>
+        <article>
+            <h3>
+                {header}
+            </h3>
             <p>
-                Intro
+                {paragraph}
             </p>
-        </section>
+        </article>
     );
 }
 
