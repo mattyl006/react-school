@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({children, color, bgColor}) {
+function Button({children, color = 'asbestos', bgColor = 'silver'}) {
 
     const colors = {
         midnightBlue: '#2c3e50',
