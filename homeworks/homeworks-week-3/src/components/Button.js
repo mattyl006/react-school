@@ -8,6 +8,7 @@ function Button({children, color = 'asbestos', bgColor = 'silver'}) {
         greenSea: '#16a085',
         silver: '#bdc3c7',
         amethyst: '#9b59b6',
+        englishViolet: '#4C3B4D'
     };
 
     const styles = {
@@ -16,6 +17,7 @@ function Button({children, color = 'asbestos', bgColor = 'silver'}) {
         width: 200,
         height: 64,
         borderRadius: 12,
+        marginBottom: 32,
     };
 
     return (

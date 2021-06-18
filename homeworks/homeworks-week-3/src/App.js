@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './components/Button';
+import ButtonClass from './components/ButtonClass';
 
 const styles = {
     h1: {
@@ -14,6 +15,8 @@ const styles = {
     },
     section: {
         marginBottom: '64px',
+        display: 'flex',
+        flexDirection: 'column'
     },
 };
 
@@ -30,6 +33,9 @@ function App() {
             <Button color='silver' bgColor='midnightBlue'>
                 Click me
             </Button>
+            <ButtonClass color='englishViolet'>
+                Click me (class version)
+            </ButtonClass>
         </section>
     </div>
   );
