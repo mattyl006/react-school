@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './components/Button';
 import ButtonClass from './components/ButtonClass';
+import TextareaClass from './components/TextareaClass';
 
 const styles = {
     h1: {
@@ -36,6 +37,9 @@ function App() {
             <ButtonClass color='englishViolet'>
                 Click me (class version)
             </ButtonClass>
+            <TextareaClass>
+                Class Textarea text.
+            </TextareaClass>
         </section>
     </div>
   );

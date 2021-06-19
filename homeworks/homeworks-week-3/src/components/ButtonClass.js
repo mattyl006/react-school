@@ -23,6 +23,7 @@ class ButtonClass extends React.Component {
         height: 64,
         borderRadius: 12,
         fontSize: 16,
+        marginBottom: 64,
     };
 
     render() {
