@@ -18,6 +18,7 @@ function Button({children, color = 'asbestos', bgColor = 'silver'}) {
         height: 64,
         borderRadius: 12,
         marginBottom: 32,
+        padding: 8,
     };
 
     return (

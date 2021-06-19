@@ -22,10 +22,12 @@ class TextareaClass extends React.Component {
     styles = {
         color: this.colors[this.props.color],
         backgroundColor: this.colors[this.props.bgColor],
-        borderRadius: this.colors[this.props.borderRadius],
+        borderRadius: this.props.borderRadius,
         border: `solid ${this.props.borderSize} ${this.colors[this.props.borderColor]}`,
         width: '80%',
         fontSize: 16,
+        padding: 12,
+        marginBottom: 32,
     };
 
     render() {
