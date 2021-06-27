@@ -1,10 +1,6 @@
 import React from 'react';
-import Button from './components/Button';
-import ButtonClass from './components/ButtonClass';
-import Input from './components/Input';
-import Textarea from './components/Textarea';
-import TextareaClass from './components/TextareaClass';
-import InputClass from './components/InputClass';
+import {ButtonClass, InputClass, TextareaClass} from './components/class';
+import {Button, Input, Textarea} from './components/function';
 
 function App() {
 
