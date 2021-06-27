@@ -4,6 +4,7 @@ import ButtonClass from './components/ButtonClass';
 import Input from './components/Input';
 import Textarea from './components/Textarea';
 import TextareaClass from './components/TextareaClass';
+import InputClass from './components/InputClass';
 
 function App() {
 
@@ -45,6 +46,10 @@ function App() {
                 <h2 style={styles.h2}>
                     Input and Textarea
                 </h2>
+                <InputClass borderSize='2px' bgColor='greenSea'
+                            borderRadius='8px' borderColor='silver'>
+                    Class Input
+                </InputClass>
                 <Input color='silver' bgColor='midnightBlue'
                        borderSize='2px' borderRadius='8px' borderColor='asbestos'>
                     Input

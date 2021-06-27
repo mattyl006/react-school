@@ -1,4 +1,5 @@
 import React from 'react';
+import Textarea from './Textarea';
 
 function Input(props) {
 
@@ -37,6 +38,14 @@ function Input(props) {
             <input style={styles.input} id='input' type="text"/>
         </p>
     );
-} 
+}
+
+Input.defaultProps = {
+    color: 'honeyDew',
+    bgColor: 'greenSea',
+    borderSize: 2,
+    borderRadius: 0,
+    borderColor: 'transparent',
+};
 
 export default Input;
