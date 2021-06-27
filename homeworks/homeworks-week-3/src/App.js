@@ -45,7 +45,8 @@ function App() {
                 <h2 style={styles.h2}>
                     Input and Textarea
                 </h2>
-                <Input>
+                <Input color='silver' bgColor='midnightBlue'
+                       borderSize='2px' borderRadius='8px' borderColor='asbestos'>
                     Input
                 </Input>
                 <Textarea borderSize='4px' borderRadius='8px' borderColor='silver'>
