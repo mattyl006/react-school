@@ -1,6 +1,7 @@
 import React from 'react';
 import {ButtonClass, InputClass, TextareaClass} from 'components/class';
 import {Button, Input, Textarea} from 'components/function';
+import CardClass from 'components/class/CardClass';
 
 function App() {
 
@@ -57,6 +58,12 @@ function App() {
                                borderSize='4px' borderRadius='8px' borderColor='asbestos'>
                     Class Textarea text.
                 </TextareaClass>
+            </section>
+            <section style={styles.section}>
+                <h2 style={styles.h2}>
+                    Card Component
+                </h2>
+                <CardClass />
             </section>
         </div>
     );
