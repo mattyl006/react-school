@@ -16,9 +16,19 @@ import P from 'components/class/CardClass/styled-components/P';
 import paella from '../../../assets/paella.jpg';
 
 class CardClass extends React.Component {
+
+    state = {
+        showMore: false,
+    }
+
+    showMoreHandler = () => {
+        let newShowMore = !this.state.showMore;
+        this.setState({showMore: newShowMore});
+    }
+
     render() {
         return (
-            <Article>
+            <Article showMore={this.state.showMore}>
                 <TopDiv>
                     <Avatar>
                         R
@@ -49,11 +59,11 @@ class CardClass extends React.Component {
                             {/*share icon*/}
                         </Button>
                     </LeftIconsDiv>
-                    <Button arrow>
+                    <Button arrow onClick={this.showMoreHandler} showMore={this.state.showMore}>
                         {/*arrow icon*/}
                     </Button>
                 </BottomDiv>
-                <More>
+                <More showMore={this.state.showMore}>
                     <P>
                         Method:
                     </P>

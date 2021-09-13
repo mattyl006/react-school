@@ -46,13 +46,14 @@ const Button = styled.button`
   margin: 0;
   border: none;
   cursor: pointer;
-  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 0.5s ease-in-out;
   width: 40px;
   height: 40px;
   position: absolute;
   border-radius: 50%;
   top: ${({menu, arrow, heart, share}) => topHandler(menu, arrow, heart, share)};
   right: ${({menu, arrow, heart, share}) => rightHandler(menu, arrow, heart, share)};
+  transform: ${({showMore}) => showMore ? 'rotate(180deg)' : 'none'};
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.04);
