@@ -24,8 +24,7 @@ function Textarea(props) {
     };
 
     return (
-        <textarea style={styles}>
-            {props.children}
+        <textarea style={styles} defaultValue={props.children}>
         </textarea>
     );
 }

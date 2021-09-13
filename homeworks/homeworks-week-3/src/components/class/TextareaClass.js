@@ -32,8 +32,7 @@ class TextareaClass extends React.Component {
 
     render() {
         return (
-            <textarea style={this.styles}>
-                {this.props.children}
+            <textarea style={this.styles} defaultValue={this.props.children}>
             </textarea>
         );
     }

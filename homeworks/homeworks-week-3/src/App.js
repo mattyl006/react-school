@@ -1,7 +1,7 @@
 import React from 'react';
 import {ButtonClass, InputClass, TextareaClass} from 'components/class';
 import {Button, Input, Textarea} from 'components/function';
-import CardClass from 'components/class/CardClass';
+import CardClass from 'components/class/CardClass/CardClass';
 
 function App() {
 
@@ -49,7 +49,7 @@ function App() {
                 </InputClass>
                 <Input color='silver' bgColor='midnightBlue'
                        borderSize='2px' borderRadius='8px' borderColor='asbestos'>
-                    Input
+                    Hook Input
                 </Input>
                 <Textarea borderSize='4px' borderRadius='8px' borderColor='silver'>
                     Textarea text.
