@@ -2,18 +2,24 @@ import React from 'react';
 import {ButtonClass, InputClass, TextareaClass} from 'components/class';
 import {Button, Input, Textarea} from 'components/function';
 import CardClass from 'components/class/CardClass/CardClass';
+import Card from 'components/function/Card';
 
 function App() {
 
     const styles = {
         h1: {
             margin: '0 0 64px 0',
-            fontSize: '48px',
+            fontSize: '32px',
             fontFamily: 'Montserrat Alternates, sans-serif',
         },
         h2: {
             margin: '0 0 48px 0',
-            fontSize: '36px',
+            fontSize: '24px',
+            fontFamily: 'Montserrat Alternates, sans-serif',
+        },
+        h3: {
+            margin: '0 0 48px 0',
+            fontSize: '20px',
             fontFamily: 'Montserrat Alternates, sans-serif',
         },
         section: {
@@ -63,7 +69,14 @@ function App() {
                 <h2 style={styles.h2}>
                     Card Component
                 </h2>
+                <h3>
+                    Class
+                </h3>
                 <CardClass />
+                <h3>
+                    Hook
+                </h3>
+                <Card />
             </section>
         </div>
     );
