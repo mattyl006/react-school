@@ -3,52 +3,46 @@ import {ButtonClass, InputClass, TextareaClass} from 'components/class';
 import {Button, Input, Textarea} from 'components/function';
 import CardClass from 'components/class/CardClass/CardClass';
 import Card from 'components/function/Card';
+import Menu from 'components/function/Menu/Menu';
+import MenuLink from 'components/function/MenuLink';
+import {H1, H2, H3, Section, Article} from 'StyledApp';
 
 function App() {
 
-    const styles = {
-        h1: {
-            margin: '0 0 64px 0',
-            fontSize: '32px',
-            fontFamily: 'Montserrat Alternates, sans-serif',
-        },
-        h2: {
-            margin: '0 0 48px 0',
-            fontSize: '24px',
-            fontFamily: 'Montserrat Alternates, sans-serif',
-        },
-        h3: {
-            margin: '0 0 48px 0',
-            fontSize: '20px',
-            fontFamily: 'Montserrat Alternates, sans-serif',
-        },
-        section: {
-            marginBottom: '64px',
-            display: 'flex',
-            flexDirection: 'column'
-        },
-    };
-
     return (
-        <div className="App">
-            <h1 style={styles.h1}>
-                React School - Homeworks Week III
-            </h1>
-            <section style={styles.section}>
-                <h2 style={styles.h2}>
+        <div>
+            <Menu>
+                <MenuLink to="#" isActive>
+                    Home
+                </MenuLink>
+                <MenuLink to="#section1">
                     Modifiable Button
-                </h2>
+                </MenuLink>
+                <MenuLink to="#section2" >
+                    Input and Textarea
+                </MenuLink>
+                <MenuLink to="#section3">
+                    Card
+                </MenuLink>
+            </Menu>
+            <H1>
+                React School - Homeworks Week III
+            </H1>
+            <Section id="section1">
+                <H2>
+                    Modifiable Button
+                </H2>
                 <Button color='silver' bgColor='midnightBlue'>
                     Click me
                 </Button>
                 <ButtonClass color='englishViolet'>
                     Click me (class ver.)
                 </ButtonClass>
-            </section>
-            <section style={styles.section}>
-                <h2 style={styles.h2}>
+            </Section>
+            <Section id="section2">
+                <H2>
                     Input and Textarea
-                </h2>
+                </H2>
                 <InputClass borderSize='2px' bgColor='greenSea'
                             borderRadius='8px' borderColor='silver'>
                     Class Input
@@ -60,24 +54,28 @@ function App() {
                 <Textarea borderSize='4px' borderRadius='8px' borderColor='silver'>
                     Textarea text.
                 </Textarea>
-                <TextareaClass color='silver' bgColor='midnightBlue' 
+                <TextareaClass color='silver' bgColor='midnightBlue'
                                borderSize='4px' borderRadius='8px' borderColor='asbestos'>
                     Class Textarea text.
                 </TextareaClass>
-            </section>
-            <section style={styles.section}>
-                <h2 style={styles.h2}>
+            </Section>
+            <Section id="section3">
+                <H2>
                     Card Component
-                </h2>
-                <h3>
-                    Class
-                </h3>
-                <CardClass />
-                <h3>
-                    Hook
-                </h3>
-                <Card />
-            </section>
+                </H2>
+                <Article>
+                    <H3>
+                        Class
+                    </H3>
+                    <CardClass />
+                </Article>
+                <Article>
+                    <H3>
+                        Hook
+                    </H3>
+                    <Card />
+                </Article>
+            </Section>
         </div>
     );
 }
