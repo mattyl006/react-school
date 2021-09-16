@@ -5,12 +5,12 @@ import CardClass from 'components/class/CardClass/CardClass';
 import Card from 'components/function/Card';
 import Menu from 'components/function/Menu/Menu';
 import MenuLink from 'components/function/MenuLink';
-import {H1, H2, H3, Section, Article} from 'StyledApp';
+import {H1, H2, H3, Section, Article, MainDiv} from 'StyledApp';
 
 function App() {
 
     return (
-        <div>
+        <MainDiv>
             <Menu>
                 <MenuLink to="#" isActive>
                     Home
@@ -76,7 +76,12 @@ function App() {
                     <Card />
                 </Article>
             </Section>
-        </div>
+            <Section id="section4">
+                <H2>
+                    Employees
+                </H2>
+            </Section>
+        </MainDiv>
     );
 }
 
