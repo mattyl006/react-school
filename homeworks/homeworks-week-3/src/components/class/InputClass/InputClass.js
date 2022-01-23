@@ -1,4 +1,6 @@
 import React from 'react';
+import P from './styled-components/P';
+import Label from './styled-components/Label';
 
 class InputClass extends React.Component {
     static defaultProps = {
@@ -38,12 +40,12 @@ class InputClass extends React.Component {
 
     render() {
         return (
-            <p style={this.styles.p}>
-                <label htmlFor='input' style={this.styles.label}>
+            <P>
+                <Label htmlFor='input'>
                     {this.props.children}
-                </label>
+                </Label>
                 <input style={this.styles.input} id='input' type="text"/>
-            </p>
+            </P>
         );
     }
 }

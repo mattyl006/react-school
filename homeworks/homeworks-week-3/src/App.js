@@ -1,5 +1,5 @@
 import React from 'react';
-import {ButtonClass, InputClass, TextareaClass} from 'components/class';
+import {ButtonClass, InputClass, NavButtonClass, TextareaClass} from 'components/class';
 import {Button, Input, Textarea} from 'components/function';
 import CardClass from 'components/class/CardClass/CardClass';
 import Card from 'components/function/Card';
@@ -8,9 +8,9 @@ import MenuLink from 'components/function/MenuLink';
 import {H1, H2, H3, Section, Article, MainDiv} from 'StyledApp';
 
 function App() {
-
     return (
         <MainDiv>
+            <NavButtonClass />
             <Menu>
                 <MenuLink to="#" isActive>
                     Home

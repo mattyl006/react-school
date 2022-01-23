@@ -10,7 +10,7 @@ const Nav = styled.nav`
   height: 150vh;
   background-color: rgba(240, 248, 255, 0.95);
   box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-  z-index: 10;
+  z-index: 2;
 `;
 
 export default Nav;
