@@ -8,10 +8,18 @@ import MenuLink from 'components/function/MenuLink';
 import {H1, H2, H3, Section, Article, MainDiv} from 'StyledApp';
 
 function App() {
+
+    const [menuDisplay, setMenuDisplay] = React.useState(true);
+
+    const toggleMenuDisplay = () => {
+        const newDisplay = !menuDisplay;
+        setMenuDisplay(newDisplay);
+    };
+
     return (
         <MainDiv>
-            <NavButtonClass />
-            <Menu>
+            <NavButtonClass toggleMenu={toggleMenuDisplay} />
+            <Menu menuDisplay={menuDisplay}>
                 <MenuLink to="#" isActive>
                     Home
                 </MenuLink>

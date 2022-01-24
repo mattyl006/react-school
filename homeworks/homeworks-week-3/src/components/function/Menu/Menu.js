@@ -1,9 +1,9 @@
 import React from 'react';
 import Nav from 'components/function/Menu/styled-components/Nav';
 
-function Menu({children}) {
+function Menu({children, menuDisplay}) {
     return (
-        <Nav>
+        <Nav menuDisplay={menuDisplay}>
             {children}
         </Nav>
     );

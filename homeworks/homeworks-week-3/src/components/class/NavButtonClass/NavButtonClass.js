@@ -4,7 +4,7 @@ import Button from './styled-components/Button';
 class NavButtonClass extends React.Component {
     render() {
         return (
-            <Button />
+            <Button onClick={this.props.toggleMenu} />
         );
     }
 }
