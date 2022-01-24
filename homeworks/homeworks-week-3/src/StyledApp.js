@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
 const MainDiv = styled.div`
-  @media (max-width: 1082px) {
-    margin-left: 260px;
-  }
-  margin-left: 20vw;
   position: relative;
+  padding: 8px;
 `;
 
 const H1 = styled.h1`
@@ -30,6 +27,8 @@ const Section = styled.section`
   margin-bottom: 64px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Article = styled.article`
