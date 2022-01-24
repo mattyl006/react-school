@@ -7,6 +7,8 @@ import Menu from 'components/function/Menu/Menu';
 import MenuLink from 'components/function/MenuLink';
 import {H1, H2, H3, Section, Article, MainDiv} from 'StyledApp';
 import NavButton from 'components/function/NvButton';
+import Employees from 'components/function/Employees';
+import employeesData from 'employeesData';
 
 function App() {
 
@@ -90,6 +92,7 @@ function App() {
                 <H2>
                     Employees
                 </H2>
+                <Employees data={employeesData}/>
             </Section>
         </MainDiv>
     );
