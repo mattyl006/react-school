@@ -6,6 +6,7 @@ import Card from 'components/function/Card';
 import Menu from 'components/function/Menu/Menu';
 import MenuLink from 'components/function/MenuLink';
 import {H1, H2, H3, Section, Article, MainDiv} from 'StyledApp';
+import NavButton from 'components/function/NvButton';
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
 
     return (
         <MainDiv>
-            <NavButtonClass toggleMenu={toggleMenuDisplay} />
+            {/*<NavButtonClass toggleMenu={toggleMenuDisplay} />*/}
+            <NavButton toggleMenu={toggleMenuDisplay} />
             <Menu menuDisplay={menuDisplay}>
                 <MenuLink to="#" isActive>
                     Home
