@@ -2,6 +2,7 @@ import React from 'react';
 import Table from './styled-components/Table';
 import Tr from './styled-components/Tr';
 import Td from './styled-components/Td';
+import Worker from 'components/function/Employees/Worker';
 
 function Employees(props) {
     return (
@@ -25,12 +26,7 @@ function Employees(props) {
                             <Td>
                                 {elem.id}
                             </Td>
-                            <Td>
-                                {elem.name} {elem.surname}
-                            </Td>
-                            <Td>
-                                wiek: {elem.age}, pensja: {elem.salary}, stanowisko: {elem.position}
-                            </Td>
+                            <Worker employee={elem} />
                         </Tr>
                     );
                 })

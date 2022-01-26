@@ -6,6 +6,7 @@ const Td = styled.td`
   border: 1px solid #000;
   font-weight: ${({bold}) => bold ? 'bold' : 'normal'};
   text-align: center;
+  cursor: ${({pointer}) => pointer ? 'pointer' : 'auto'};
 `;
 
 export default Td;
