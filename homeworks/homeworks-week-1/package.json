@@ -1,0 +1,16 @@
+{
+  "name": "homeworks-week-1",
+  "version": "1.0.0",
+  "description": "**Celem zadań, było przećwiczenie obsługi npm.**",
+  "main": "leap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "now": "node time.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "readline": "^1.3.0"
+  }
+}
