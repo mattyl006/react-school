@@ -1,5 +1,7 @@
 import React from 'react';
 
+const MAX_PARAGRAPH_LENGTH = 60;
+
 const styles = {
     marginBottom: '32px',
     header: {
@@ -14,8 +16,8 @@ const styles = {
 };
 
 function sliceHandler(paragraph) {
-    if(paragraph.length > 60) {
-        return `${paragraph.slice(0, 60)}...`;
+    if(paragraph.length > MAX_PARAGRAPH_LENGTH) {
+        return `${paragraph.slice(0, MAX_PARAGRAPH_LENGTH)}...`;
     }
     return paragraph;
 }
