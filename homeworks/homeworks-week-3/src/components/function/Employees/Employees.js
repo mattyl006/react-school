@@ -22,7 +22,7 @@ function Employees(props) {
             {
                 props.data.map((elem) => {
                     return (
-                        <Tr key={elem.id}>
+                        <Tr key={`employee-${elem.id}`}>
                             <Td>
                                 {elem.id}
                             </Td>
