@@ -31,15 +31,13 @@ function App() {
                 Clickbait app
             </h2>
             {
-                posts.map((elem) => {
-                    return (
-                        <BlogTile
-                            key={`posts-${elem.id}`}
-                            header={elem.title}
-                            paragraph={elem.intro}
-                        />
-                    );
-                })
+                posts.map((elem) => (
+                    <BlogTile
+                        key={`posts-${elem.id}`}
+                        header={elem.title}
+                        paragraph={elem.intro}
+                    />
+                ))
             }
         </section>
         <section style={styles.section}>
