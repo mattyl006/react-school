@@ -9,6 +9,8 @@ const H1 = styled.h1`
   margin: 32px 0 64px 0;
   font-size: 32px;
   font-family: Montserrat Alternates, sans-serif;
+  width: 100%;
+  text-align: center;
 `;
 
 const H2 = styled.h1`
