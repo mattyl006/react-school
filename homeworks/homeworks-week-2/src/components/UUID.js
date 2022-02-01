@@ -12,13 +12,20 @@ const styles = {
 };
 
 function UUID() {
+    const [id, setId] = React.useState(uuidv4());
+    const handleClick = () => setId(uuidv4());
     return (
-        <p style={styles}>
-            Your Version 4 UUID:&nbsp;
-            <span style={styles.span}>
-                {uuidv4()}
+        <>
+            <p style={styles}>
+                Your Version 4 UUID:&nbsp;
+                <span style={styles.span}>
+                {id}
             </span>
-        </p>
+            </p>
+            <button style={{margin: '16px 0 0 0'}} onClick={handleClick}>
+                Generate next
+            </button>
+        </>
     );
 }
 
